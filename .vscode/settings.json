@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "challenge-git"
+        "challenge-git",
+        "challenge-ci"
     ]
 }
