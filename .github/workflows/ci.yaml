@@ -21,10 +21,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run:  cd challenge-ci && yarn install
-      - run: cd challenge-ci && yarn test
-      - name: SonarCloud Scan
-        uses: cd challenge-ci && SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - run: yarn install
+        working-directory: challenge-ci
+      - run: yarn test
+        working-directory: challenge-ci
+      # - name: SonarCloud Scan
+      #   uses: SonarSource/sonarcloud-github-action@master
+        
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
