@@ -201,19 +201,19 @@ func (mr *MockProductServiceInterfaceMockRecorder) Enable(product interface{}) *
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Enable", reflect.TypeOf((*MockProductServiceInterface)(nil).Enable), product)
 }
 
-// Get mocks base method.
-func (m *MockProductServiceInterface) Get(id string) (application.ProductInterface, error) {
+// Read mocks base method.
+func (m *MockProductServiceInterface) Read(id string) (application.ProductInterface, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Get", id)
+	ret := m.ctrl.Call(m, "Read", id)
 	ret0, _ := ret[0].(application.ProductInterface)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
-// Get indicates an expected call of Get.
-func (mr *MockProductServiceInterfaceMockRecorder) Get(id interface{}) *gomock.Call {
+// Read indicates an expected call of Read.
+func (mr *MockProductServiceInterfaceMockRecorder) Read(id interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Get", reflect.TypeOf((*MockProductServiceInterface)(nil).Get), id)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Read", reflect.TypeOf((*MockProductServiceInterface)(nil).Read), id)
 }
 
 // MockProductReader is a mock of ProductReader interface.

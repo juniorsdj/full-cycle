@@ -26,7 +26,7 @@ func TestRun(t *testing.T){
 
 	service := mock_application.NewMockProductServiceInterface(ctrl)
 	service.EXPECT().Create(productName, productPrice).Return(productMock, nil).AnyTimes()
-	service.EXPECT().Get(productId).Return(productMock, nil).AnyTimes()
+	service.EXPECT().Read(productId).Return(productMock, nil).AnyTimes()
 	service.EXPECT().Enable(gomock.Any()).Return(productMock, nil).AnyTimes()
 	service.EXPECT().Disable(gomock.Any()).Return(productMock, nil).AnyTimes()
 
